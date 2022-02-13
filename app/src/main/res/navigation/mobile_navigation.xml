@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home"
+    >
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.nkindustries.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home"
+        android:background="#ffffffff"
+        />
+
+    <fragment
+        android:id="@+id/nav_recharge"
+        android:name="com.example.nkindustries.ui.recharge.RechargeFragment"
+        android:label="Recharge"
+        tools:layout="@layout/fragment_recharge" />
+
+    <fragment
+        android:id="@+id/nav_wallet_pay"
+        android:name="com.example.nkindustries.ui.walletpay.WalletPayFragment"
+        android:label="Wallet Pay"
+        tools:layout="@layout/fragment_wallet_pay" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.nkindustries.ui.profile.ProfileFragment"
+        android:label="My Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_contacts"
+        android:name="com.example.nkindustries.ui.contact.ContactFragment"
+        android:label="My Contacts"
+        tools:layout="@layout/fragment_contact" />
+
+    <fragment
+        android:id="@+id/nav_wallet_report"
+        android:name="com.example.nkindustries.ui.wallet.WalletReportFragment"
+        android:label="Wallet Report"
+        tools:layout="@layout/fragment_wallet_report" />
+
+
+    <fragment
+        android:id="@+id/nav_payment_report"
+        android:name="com.example.nkindustries.ui.payment.PaymentReportFragment"
+        android:label="Payment Report"
+        tools:layout="@layout/fragment_payment_report" />
+
+    <fragment
+        android:id="@+id/nav_change_password"
+        android:name="com.example.nkindustries.ui.changepassword.ChangePasswordFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_change_password" />
+
+
+    <fragment
+        android:id="@+id/nav_mpin_password"
+        android:name="com.example.nkindustries.ui.mpin.MobilePinFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_mobile_pin" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.nkindustries.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+</navigation>

@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Theme.Design.NoActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
+    tools:context=".ui.home.HomeFragment"
+    android:id="@+id/home_fragment">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="418dp"
+        android:layout_height="336dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:src="@drawable/dashboard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.027" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:padding="0dp"
+                android:text="Hi! Pradeep Kumar"
+                android:textSize="18sp"
+                android:fontFamily="@font/roboto_medium"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="0dp"
+                android:text="Available Balance"
+                android:textColor="#000000"
+                android:textSize="11sp"
+                android:layout_marginTop="5dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/rupees_black" />
+                <TextView
+                    android:id="@+id/balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:text=""
+                    android:textSize="20sp"
+                    />
+
+            </LinearLayout>
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentStart="true"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/ic_baseline_rquest"/>
+
+                <TextView
+                    android:id="@+id/request_moneny"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginTop="10dp"
+                    android:text="Request Money"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="6dp"
+                    android:src="@drawable/ic_baseline_add_24"/>
+
+                <TextView
+                    android:id="@+id/add_moneny_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Add Money"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/bg_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:id="@+id/textView3"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:weightSum="0"
+                android:background="@drawable/bg_menu"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="20dp"
+                    android:text="Bill Payment"
+                    android:layout_marginBottom="0dp"
+                    android:elevation="10dp"
+                    android:textStyle="bold"
+                    />
+
+                <GridLayout
+                    android:id="@+id/mainGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp"
+                    android:layout_weight="0"
+                    android:alignmentMode="alignMargins"
+                    android:columnCount="3"
+                    android:columnOrderPreserved="false"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="5dp"
+                    android:rowCount="4">
+
+                    <!-- Row 1 -->
+
+                    <!-- Column 1 -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_margin="16dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/mobile" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5sp"
+                                android:gravity="center_horizontal"
+                                android:text="Recharge"
+                                android:fontFamily="@font/roboto_medium"
+                                android:textAlignment="center"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Column 2 -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_margin="16dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/bulb" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5sp"
+                                android:gravity="center_horizontal"
+                                android:text="Electricity"
+                                android:fontFamily="@font/roboto_medium"
+                                android:textAlignment="center"
+                                android:textSize="12sp"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_margin="16dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/gas" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5sp"
+                                android:gravity="center_horizontal"
+                                android:text="Gas"
+                                android:textAlignment="center"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/roboto_medium"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <!-- Row 2 -->
+
+                    <!-- Column 1 -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_margin="16dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/dth" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                android:text="DTH"
+                                android:textAlignment="center"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/roboto_medium" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Column 2 -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card5"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_margin="16dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/water" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                android:text="Water"
+                                android:textAlignment="center"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/roboto_medium" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <!-- Row 2 -->
+
+                    <!-- Column 1 -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card6"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_margin="16dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/card" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                android:text="Card"
+                                android:textAlignment="center"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/roboto_medium" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card7"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_margin="16dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/house" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5sp"
+                                android:gravity="center_horizontal"
+                                android:text="Pay Rent"
+                                android:textAlignment="center"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/roboto_medium" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card8"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_margin="16dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/trans" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5sp"
+                                android:gravity="center_horizontal"
+                                android:text="Trasnaction"
+                                android:textAlignment="center"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/roboto_medium" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <!-- Row 2 -->
+
+                    <!-- Column 1 -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="8dp"
+                        android:clickable="true"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:layout_margin="16dp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/reportpng" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                android:text="Report"
+                                android:textAlignment="center"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/roboto_medium" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                </GridLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:background="@android:color/holo_blue_dark">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HELP SECTION"
+                        android:fontFamily="@font/ubuntu_medium"
+                        android:textSize="16dp"
+                        android:textColor="#fFF"
+                    />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/divider3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="?android:attr/listDivider" />
+
+               <HorizontalScrollView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+                   <!-- Column 1 -->
+                   <LinearLayout
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:orientation="horizontal"
+                       android:layout_margin="20dp">
+                   <androidx.cardview.widget.CardView
+                       android:id="@+id/card10"
+                       android:layout_width="105dp"
+                       android:layout_height="100dp"
+                       android:layout_marginLeft="5dp"
+                       android:layout_marginRight="5dp"
+                       android:layout_marginBottom="8dp"
+                       android:clickable="true"
+                       app:cardCornerRadius="8dp"
+                       app:cardElevation="8dp">
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center_horizontal|center_vertical"
+                           android:layout_margin="16dp"
+                           android:orientation="vertical">
+
+                           <ImageView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_gravity="center_horizontal"
+                               android:src="@drawable/reportpng" />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginTop="10dp"
+                               android:gravity="center_horizontal"
+                               android:text="Help"
+                               android:layout_gravity="center_horizontal"
+                               android:textAlignment="center"
+                               android:textSize="12sp"
+                               android:fontFamily="@font/roboto_medium"/>
+
+                       </LinearLayout>
+
+                   </androidx.cardview.widget.CardView>
+
+                   <!-- Column 1 -->
+                   <androidx.cardview.widget.CardView
+                       android:id="@+id/card11"
+                       android:layout_width="105dp"
+                       android:layout_height="match_parent"
+                       android:layout_rowWeight="1"
+                       android:layout_columnWeight="1"
+                       android:layout_marginLeft="5dp"
+                       android:layout_marginRight="5dp"
+                       android:layout_marginBottom="8dp"
+                       android:clickable="true"
+                       app:cardCornerRadius="8dp"
+                       app:cardElevation="8dp">
+
+                       <LinearLayout
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center_horizontal|center_vertical"
+                           android:layout_margin="16dp"
+                           android:orientation="vertical">
+
+                           <ImageView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_gravity="center_horizontal"
+                               android:src="@drawable/reportpng" />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginTop="10dp"
+                               android:gravity="center_horizontal"
+                               android:text="FAQ"
+                               android:textAlignment="center"
+                               android:textSize="12sp"
+                               android:fontFamily="@font/roboto_medium"/>
+
+                       </LinearLayout>
+
+                   </androidx.cardview.widget.CardView>
+
+
+                   <!-- Column 1 -->
+                   <androidx.cardview.widget.CardView
+                       android:id="@+id/card12"
+                       android:layout_width="105dp"
+                       android:layout_height="match_parent"
+                       android:layout_rowWeight="1"
+                       android:layout_columnWeight="1"
+                       android:layout_marginLeft="5dp"
+                       android:layout_marginRight="5dp"
+                       android:layout_marginBottom="8dp"
+                       android:clickable="true"
+                       app:cardCornerRadius="8dp"
+                       app:cardElevation="8dp">
+
+                       <LinearLayout
+                           android:layout_width="match_parent"
+                           android:layout_height="wrap_content"
+                           android:layout_gravity="center_horizontal|center_vertical"
+                           android:layout_margin="16dp"
+                           android:orientation="vertical">
+
+                           <ImageView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_gravity="center_horizontal"
+                               android:src="@drawable/reportpng" />
+
+                           <TextView
+                               android:layout_width="wrap_content"
+                               android:layout_height="wrap_content"
+                               android:layout_marginTop="10dp"
+                               android:gravity="center_horizontal"
+                               android:text="Contact Us"
+                               android:textAlignment="center"
+                               android:textSize="12sp"
+                               android:fontFamily="@font/roboto_medium"/>
+
+                       </LinearLayout>
+
+                   </androidx.cardview.widget.CardView>
+                   </LinearLayout>
+               </HorizontalScrollView>
+
+                <ImageView
+                    android:id="@+id/invite"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/referandearn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintVertical_bias="0.027" />
+                <include layout="@layout/copyrights_footer" />
+            </LinearLayout>
+        </ScrollView>
+</LinearLayout>
+</RelativeLayout>

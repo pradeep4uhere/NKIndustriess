@@ -1,0 +1,1183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="600dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="-70dp"
+        android:contentDescription="img"
+        android:src="@drawable/transfer"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="15dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:elevation="10dp"
+        >
+        <ImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/profile"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/bg_menu"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="30dp"
+            android:elevation="20dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtNmae"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/ubuntu_bold"
+                    android:gravity="center_vertical"
+                    android:text="Pradeep Kumar"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/txtMobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center_vertical"
+                    android:text="Mobile: +91-9015446567"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txtEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:text="Email: info@payertrust.in"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="1dp"
+                        android:gravity="center_vertical"
+                        android:text="Agent Code:"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/txtAgentCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:gravity="center_vertical"
+                        android:text="AGPAYER0001"
+                        android:textColor="#2196F3"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:text="KYC:"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/txtKycActive"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:gravity="center_vertical"
+                        android:text="Active"
+                        android:textColor="#0A780E"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@android:color/holo_blue_light"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="Address Details"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/edit_kyc_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_edit_24"
+                android:tooltipText="Edit Address Details" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linLayAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:elevation="10dp"
+                android:padding="30dp"
+                app:cardCornerRadius="5dp">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:text="Address" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtAddress1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_column="2"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="A-179, shyam Vihar, Phase-1" />
+
+                            <TextView
+                                android:id="@+id/txtAddress2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_column="2"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="Near Krishna Market, Road No:5" />
+
+                            <TextView
+                                android:id="@+id/txtPinCode"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_column="2"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="South West Delhi, Pin-110043" />
+
+                        </LinearLayout>
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+         <LinearLayout
+             android:id="@+id/linLayAddressEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+             android:visibility="gone"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Address Line 1" />
+
+                        <EditText
+                            android:id="@+id/address_line_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:textSize="13dp"
+                            android:inputType="text" />
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.google.android.material.divider.MaterialDivider>
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:weightSum="3"
+                 android:orientation="horizontal"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginRight="10dp"
+                 android:padding="10dp">
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:text="Address Line 2" />
+
+                 <EditText
+                     android:id="@+id/address_line_2"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="2"
+                     android:textSize="13dp"
+                     android:inputType="text" />
+             </LinearLayout>
+             <com.google.android.material.divider.MaterialDivider
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+             </com.google.android.material.divider.MaterialDivider>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:weightSum="3"
+                 android:orientation="horizontal"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginRight="10dp"
+                 android:padding="10dp">
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:text="State" />
+
+                 <com.google.android.material.textfield.TextInputLayout
+                     android:id="@+id/customerSpinnerLayout"
+                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="2">
+
+                     <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                         android:id="@+id/aoutoCompleteState"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:clickable="true"
+                         tools:ignore="KeyboardInaccessibleWidget" />
+                 </com.google.android.material.textfield.TextInputLayout>
+             </LinearLayout>
+             <com.google.android.material.divider.MaterialDivider
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+             </com.google.android.material.divider.MaterialDivider>
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:weightSum="3"
+                 android:orientation="horizontal"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginRight="10dp"
+                 android:padding="10dp">
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:text="City" />
+
+                 <com.google.android.material.textfield.TextInputLayout
+                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="2">
+
+                     <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                         android:id="@+id/aoutoCompleteCity"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:clickable="true"
+                         tools:ignore="KeyboardInaccessibleWidget" />
+                 </com.google.android.material.textfield.TextInputLayout>
+             </LinearLayout>
+             <com.google.android.material.divider.MaterialDivider
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+             </com.google.android.material.divider.MaterialDivider>
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:weightSum="3"
+                 android:orientation="horizontal"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginRight="10dp"
+                 android:padding="10dp">
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:text="Pin Code" />
+
+                 <EditText
+                     android:id="@+id/pincode"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="2"
+                     android:maxLength="6"
+                     android:inputType="number" />
+             </LinearLayout>
+             <com.google.android.material.divider.MaterialDivider
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+             </com.google.android.material.divider.MaterialDivider>
+
+
+         </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@android:color/holo_blue_light"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="KYC Details"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:gravity="right"
+                android:src="@drawable/ic_edit_24"
+                android:tooltipText="Edit Address Details" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linLayKYCEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp">
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Date Of Birth" />
+
+                        <EditText
+                            android:id="@+id/date_of_birth"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:inputType="date" />
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.google.android.material.divider.MaterialDivider>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Aadhar Card" />
+
+                        <EditText
+                            android:id="@+id/aadhar_card_input"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:inputType="numberSigned" />
+
+
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.google.android.material.divider.MaterialDivider>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Pan Card" />
+
+                        <EditText
+                            android:id="@+id/pan_card_input"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:inputType="text" />
+
+
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.google.android.material.divider.MaterialDivider>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="GST" />
+
+                        <EditText
+                            android:id="@+id/gst_number_input"
+                            android:layout_weight="1"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="text" />
+
+
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.google.android.material.divider.MaterialDivider>
+
+            <Button
+                android:id="@+id/save_kyc_btn"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:text="Save All"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                app:backgroundTint="#F44336" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linLayKYC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="5dp">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:text="Date Of Birth" />
+
+                        <TextView
+                            android:id="@+id/txtDOB"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="07th March 1984" />
+
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:text="Aadhar Card" />
+
+                        <TextView
+                            android:id="@+id/txtAdharCard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="9286-1639-1580" />
+
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:text="PAN CARD" />
+
+                        <TextView
+                            android:id="@+id/txtPanCard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="BDWPK1545A" />
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:text="GST Number" />
+
+                        <TextView
+                            android:id="@+id/txtGSTNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:text="BDWRED1545AFEFAEG" />
+
+
+                    </TableRow>
+
+                </TableLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@android:color/holo_blue_light"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="Upload Documents"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:gravity="right"
+                    android:src="@drawable/ic_edit_24"
+                    android:tooltipText="Uploads Document" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:text="Uplaod Profile Image" />
+                <ImageView
+                    android:id="@+id/imgProfileImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <Button
+                    android:id="@+id/pofile_img_upload_btn2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Choose"
+                    android:shadowRadius="@integer/material_motion_duration_long_1"
+                    app:backgroundTint="#FF5722" />
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.google.android.material.divider.MaterialDivider>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:id="@+id/pan_card_image"
+                    android:text="Upload Pan Card" />
+                <ImageView
+                    android:id="@+id/imgPanCard"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <Button
+                    android:id="@+id/pan_card_upload_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Choose"
+                    app:backgroundTint="#FF5722" />
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.google.android.material.divider.MaterialDivider>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:id="@+id/aadhar_card_image"
+                    android:text="Upload Aadhar Card" />
+                <ImageView
+                    android:id="@+id/imgAdhar"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <Button
+                    android:id="@+id/aadhar_upload_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Choose"
+                    app:backgroundTint="#FF5722" />
+
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.google.android.material.divider.MaterialDivider>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:text="Uplaod GST [Optional]" />
+
+                <ImageView
+                    android:id="@+id/imgGST"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+                <Button
+                    android:id="@+id/gst_upload_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="CHOOSE"
+                    app:backgroundTint="#FF5722" />
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.google.android.material.divider.MaterialDivider>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_support_agent_24"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:id="@+id/help_center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/ubuntu_bold"
+                        android:text="Help Center"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#CCCCCC"
+                        android:textSize="10dp"
+                        android:text="Help Regarding your recent activity"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:src="@drawable/ic_help_right_24"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.google.android.material.divider.MaterialDivider>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_share_24"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Refer and Earn"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#CCCCCC"
+                        android:textSize="10dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Invite your friend and earn"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:src="@drawable/ic_help_right_24"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.google.android.material.divider.MaterialDivider>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_rewards_free_24"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="My Rewards"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#CCCCCC"
+                        android:textSize="10dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Get reward on every transaction (TC apply)"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:src="@drawable/ic_help_right_24"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.google.android.material.divider.MaterialDivider>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_website_24"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="About Us"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#CCCCCC"
+                        android:textSize="10dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Get to know more about PayerTrust"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:src="@drawable/ic_help_right_24"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.google.android.material.divider.MaterialDivider>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_website_24"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Privacy Policy"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#CCCCCC"
+                        android:textSize="10dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Read our privacy and policy."/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:src="@drawable/ic_help_right_24"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.google.android.material.divider.MaterialDivider>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_website_24"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="left"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Terms and Conditions"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#CCCCCC"
+                        android:textSize="10dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Get to know more about Terms and Conditions"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:src="@drawable/ic_help_right_24"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.google.android.material.divider.MaterialDivider>
+
+        <include layout="@layout/copyrights_footer" />
+    </LinearLayout>
+</ScrollView>
+    </LinearLayout>
+</RelativeLayout>

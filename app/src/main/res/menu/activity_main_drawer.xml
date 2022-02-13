@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_recharge"
+            android:icon="@drawable/ic_baseline_balance_wallet_24"
+            android:title="Wallet Recharge" />
+        <item
+            android:id="@+id/nav_wallet_pay"
+            android:icon="@drawable/ic_baseline_mobile_screen_share_24"
+            android:title="Wallet Pay" />
+
+
+        <item
+            android:id="@+id/nav_contacts"
+            android:icon="@drawable/ic_baseline_contact_24"
+            android:title="My Contacts" />
+        <item
+            android:id="@+id/nav_wallet_report"
+            android:icon="@drawable/ic_wallet_report"
+            android:title="Wallet Report" />
+        <item
+            android:id="@+id/nav_payment_report"
+            android:icon="@drawable/ic_baseline_insert_chart_outlined_24"
+            android:title="Payment Report" />
+
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item android:title="Setting Menu">
+        <menu>
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_baseline_person_pin_24"
+            android:title="My Profile" />
+        <item
+            android:id="@+id/nav_change_password"
+            android:icon="@drawable/ic_baseline_admin_panel_settings_24"
+            android:title="Change Password" />
+
+<!--        <item-->
+<!--            android:id="@+id/nav_mpin_password"-->
+<!--            android:icon="@drawable/ic_baseline_fiber_pin_24"-->
+<!--            android:title="MPIN Setting" />-->
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_baseline_power_settings_new_24"
+            android:title="Sign Out" />
+        </menu>
+        </item>
+    </group>
+</menu>
