@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "246511163985",
+    "project_id": "nkindustriess-a8dee",
+    "storage_bucket": "nkindustriess-a8dee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:246511163985:android:5e901ce75a439e3ed83670",
+        "android_client_info": {
+          "package_name": "com.nkindustriess.nkindustriess"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "246511163985-flaecpde9j5igo0cllmkjcsndj08qj6r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0pcG4y95xFSCEQ1AYXzHEwTQxuOJb5aQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "246511163985-flaecpde9j5igo0cllmkjcsndj08qj6r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
