@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Theme.Design.NoActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/holo_blue_dark"
+    tools:context=".ui.payment.PaymentReportFragment"
+    android:id="@+id/report_list_layout">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="600dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="-70dp"
+                android:src="@drawable/payment_report"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="15dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/bg_menu"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                android:orientation="vertical"
+                >
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/text_wallet_report"
+                    android:text="All Transactions"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="16dp"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/ubuntu_medium"
+                    >
+
+                </TextView>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:padding="10dp">
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:hintTextColor="@color/purple_700">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtFromDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="#FFFFFF"
+                                android:focusable="false"
+                                android:hint="From Date"
+                                android:inputType="date"
+                                android:minWidth="100dp"
+                                android:textColorHint="@color/purple_700"
+                                android:textSize="12dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:id="@+id/from_calender"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/ic_baseline_calendar_today_24"/>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edtToDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minWidth="100dp"
+                                android:background="#FFFFFF"
+                                android:inputType="date"
+                                android:focusable="false"
+                                android:textSize="12dp"
+                                android:hint="To Date" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:id="@+id/to_calender"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/ic_baseline_calendar_today_24"/>
+
+                        <Button
+                            android:id="@+id/button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:text="Submit"
+                            android:textSize="9dp"
+                            app:backgroundTint="#F44336" />
+
+                    </TableRow>
+                </TableLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"
+                        android:paddingBottom="24dp"/>
+
+                    <ProgressBar
+                        android:id="@+id/progressbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"/>
+
+                </FrameLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

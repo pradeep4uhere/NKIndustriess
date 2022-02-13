@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContactDetail">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_blue_light"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/btn_from_conatct_details"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/ic_back" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:fontFamily="@font/roboto"
+                android:text="Contact Details"
+                android:textColor="#FFF"
+                android:textSize="18dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="right">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_notifications_24" />
+        </LinearLayout>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="20dp"
+                android:elevation="8dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/contact_image_id"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/profile" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:id="@+id/contact_name_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="PRADEEP KUMAR"
+                            android:fontFamily="@font/roboto_medium"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/contact_number_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="0dp"
+                                android:paddingTop="3dp"
+                                android:fontFamily="@font/roboto"
+                                android:text="+91-9015446567"
+                                android:textSize="11sp" />
+
+                            <TextView
+                                android:id="@+id/contact_email_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="1dp"
+                                android:text="Pradeep3300@gamil.com"
+                                android:fontFamily="@font/roboto"
+                                android:textSize="11sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="20dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="1dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/right_24" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="All Account List"
+                        android:paddingLeft="16dp"/>
+
+                </LinearLayout>
+
+                <SearchView
+                    android:id="@+id/searchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:queryHint="Search Account Number"
+                    android:layout_weight="1"
+                    android:iconifiedByDefault="false"
+                    android:layout_alignParentTop="true"
+                    />
+
+
+            </LinearLayout>
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="230dp"
+        android:background="#eee"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/add_contact_detail_fab_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:icon="@drawable/ic_white_add"
+        android:textColor="#FFF"
+        android:textColorHighlight="#fff"
+        android:textColorHint="#000FFF"
+        android:textColorLink="#fff"
+        android:scrollbarFadeDuration="200"
+        android:layout_gravity="end|bottom"
+        android:fontFamily="@font/roboto"
+        android:text="Add New Account"
+        app:backgroundTint="#2196F3" />
+
+</FrameLayout>

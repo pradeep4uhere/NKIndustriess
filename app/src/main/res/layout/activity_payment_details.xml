@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:menu="@menu/left_navigation"
+    android:background="@android:color/holo_blue_dark"
+    tools:context=".PaymentDetailsActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.PayerTrustDemo.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#03A9F4"
+            app:popupTheme="@style/Theme.PayerTrustDemo.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="600dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="-70dp"
+        android:contentDescription="img"
+        android:src="@drawable/payment_information"
+        android:layout_below="@+id/appBar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/bg_menu"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="30dp"
+            android:elevation="20dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txtAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="center_vertical"
+                    android:text="Rs. 5,00,000.00"
+                    android:textColor="#2196F3"
+                    android:textSize="24sp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="2dp"
+                    android:orientation="horizontal">
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginRight="1dp"-->
+<!--                        android:fontFamily="@font/roboto"-->
+<!--                        android:gravity="center_vertical"-->
+<!--                        android:text="Amount:"-->
+<!--                        android:textSize="14sp" />-->
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/roboto"
+                        android:text="Payment Status: "
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto_medium"
+                        android:gravity="center_vertical"
+                        android:text="Success"
+                        android:textColor="#0A780E"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@android:color/holo_blue_light"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Payment Details"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/txtDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
+                        android:text="13th Jan 2021 12:10:23 AM"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:layout_column="1"
+                                android:layout_weight="1"
+                                android:text="Amount" />
+
+                            <TextView
+                                android:id="@+id/amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_column="2"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/roboto_medium"
+                                android:gravity="right"
+                                android:text="Rs. 5,00,000.00" />
+
+
+                        </TableRow>
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto"
+                                    android:layout_column="1"
+                                    android:layout_weight="1"
+                                    android:text="Payment Ref Key" />
+
+                                <TextView
+                                    android:id="@+id/payment_ref_key"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="2"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="pay_IgTdXWTNkDQSRH" />
+
+
+                            </TableRow>
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="Transaction ID" />
+
+                                <TextView
+                                    android:id="@+id/transaction_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="2"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="order_IgTcrWLD9qVMao" />
+                            </TableRow>
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="Payment Status" />
+
+                                <TextView
+                                    android:id="@+id/payment_status"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="2"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:textColor="#0A780E"
+                                    android:fontFamily="@font/roboto_medium"
+                                    android:text="SUCCESS" />
+                            </TableRow>
+                        </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linLayAddressEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Address Line 1" />
+
+                        <EditText
+                            android:id="@+id/address_line_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:textSize="13dp"
+                            android:inputType="text" />
+                    </LinearLayout>
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </com.google.android.material.divider.MaterialDivider>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Address Line 2" />
+
+                        <EditText
+                            android:id="@+id/address_line_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:textSize="13dp"
+                            android:inputType="text" />
+                    </LinearLayout>
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </com.google.android.material.divider.MaterialDivider>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="State" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/customerSpinnerLayout"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2">
+
+                            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                android:id="@+id/aoutoCompleteState"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                tools:ignore="KeyboardInaccessibleWidget" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </com.google.android.material.divider.MaterialDivider>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="City" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2">
+
+                            <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                android:id="@+id/aoutoCompleteCity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                tools:ignore="KeyboardInaccessibleWidget" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </com.google.android.material.divider.MaterialDivider>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="3"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Pin Code" />
+
+                        <EditText
+                            android:id="@+id/pincode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:maxLength="6"
+                            android:inputType="number" />
+                    </LinearLayout>
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </com.google.android.material.divider.MaterialDivider>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@android:color/holo_blue_light"
+                    android:orientation="horizontal"
+                    android:padding="10dp"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Customer  Details"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linLayKYCEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp">
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Date Of Birth" />
+
+                        <EditText
+                            android:id="@+id/date_of_birth"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:inputType="date" />
+                    </LinearLayout>
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </com.google.android.material.divider.MaterialDivider>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Aadhar Card" />
+
+                        <EditText
+                            android:id="@+id/aadhar_card_input"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:inputType="numberSigned" />
+
+
+                    </LinearLayout>
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </com.google.android.material.divider.MaterialDivider>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Pan Card" />
+
+                        <EditText
+                            android:id="@+id/pan_card_input"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:inputType="text" />
+
+
+                    </LinearLayout>
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </com.google.android.material.divider.MaterialDivider>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="GST" />
+
+                        <EditText
+                            android:id="@+id/gst_number_input"
+                            android:layout_weight="1"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="text" />
+
+
+                    </LinearLayout>
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </com.google.android.material.divider.MaterialDivider>
+
+                    <Button
+                        android:id="@+id/save_kyc_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:text="Save All"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        app:backgroundTint="#F44336" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linLayKYC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="Full Name" />
+
+                                <TextView
+                                    android:id="@+id/txtName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="2"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="PRADEEP KUMAR" />
+
+
+                            </TableRow>
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="Email Address" />
+
+                                <TextView
+                                    android:id="@+id/txtEmail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="2"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="PRADEEP3300@gmail.com" />
+
+
+                            </TableRow>
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="1"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="Mobile No" />
+
+                                <TextView
+                                    android:id="@+id/txtMobile"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_column="2"
+                                    android:layout_weight="1"
+                                    android:gravity="right"
+                                    android:fontFamily="@font/roboto"
+                                    android:text="+917900021207" />
+
+
+                            </TableRow>
+
+
+
+                        </TableLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@android:color/holo_blue_light"
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:weightSum="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:text="Other Payment Details"
+                            android:textColor="@color/white"
+                            android:textSize="16dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:gravity="right"
+                            android:src="@drawable/ic_edit_24"
+                            android:tooltipText="Card Number" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto"
+                            android:text="Card Details" />
+
+
+                        <TextView
+                            android:id="@+id/card_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:fontFamily="@font/roboto"
+                            android:text="1234-XXXX-XXXX-1001" />
+                    </LinearLayout>
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </com.google.android.material.divider.MaterialDivider>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:fontFamily="@font/roboto"
+                            android:layout_weight="1"
+                            android:text="Issuing Bank / Card Type" />
+
+
+                        <TextView
+                            android:id="@+id/card_bank_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:fontFamily="@font/roboto"
+                            android:text="American Express- credit" />
+                    </LinearLayout>
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </com.google.android.material.divider.MaterialDivider>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:padding="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="1"
+                            android:layout_weight="1"
+                            android:text="Failed Reason" />
+                        <TextView
+                            android:id="@+id/failed_reason"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_column="2"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:fontFamily="@font/roboto"
+                            android:text="American Express- credit" />
+                    </LinearLayout>
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </com.google.android.material.divider.MaterialDivider>
+                    </LinearLayout>
+                <include layout="@layout/copyrights_footer" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

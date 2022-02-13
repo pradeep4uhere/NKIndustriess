@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.nkindustries">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PayerTrustDemo"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name="com.example.nkindustries.MoneyTransferSuccessForDMTTwo"
+            android:exported="false" />
+        <activity
+            android:name="com.example.nkindustries.RechargeConfirmationActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.nkindustries.WebLinkActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.nkindustries.ui.recharge.PaymentLinkActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.nkindustries.HelpActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.nkindustries.PaymentDetailsActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.nkindustries.NotificationList"
+            android:exported="true" />
+        <activity
+            android:name="com.example.nkindustries.WalletPaySuccess"
+            android:exported="false" />
+        <activity
+            android:name="com.example.nkindustries.PrepaidRecharge"
+            android:exported="true" />
+        <activity
+            android:name="com.example.nkindustries.OnBoardingScreen"
+            android:exported="true" />
+        <activity
+            android:name="com.example.nkindustries.LeftNavigation"
+            android:exported="true"
+            android:label="@string/title_activity_left_navigation"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.PayerTrustDemo.NoActionBar" />
+        <activity
+            android:name="com.example.nkindustries.RestPasswordSuccess"
+            android:exported="true" />
+        <activity
+            android:name="com.example.nkindustries.ForgotPassword"
+            android:exported="true" />
+        <activity
+            android:name="com.example.nkindustries.login_otp"
+            android:exported="true" />
+        <activity
+            android:name="com.example.nkindustries.Signup"
+            android:exported="true" />
+        <activity
+            android:name="com.example.nkindustries.Login"
+            android:exported="true" />
+        <activity
+            android:name="com.example.nkindustries.ContactDetail"
+            android:exported="true" />
+        <activity
+            android:name="com.example.nkindustries.AddAccount"
+            android:exported="true" />
+        <activity
+            android:name="com.example.nkindustries.TransferMoney"
+            android:exported="true" />
+        <activity
+            android:name="com.example.nkindustries.FundTransferConfirmation"
+            android:exported="true" />
+        <activity
+            android:name="com.example.nkindustries.MoneyTransferSuccess"
+            android:exported="true" />
+        <activity
+            android:name="com.example.nkindustries.Dashbaord"
+            android:exported="true" />
+        <activity
+            android:name="com.example.nkindustries.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service
+            android:name="com.example.nkindustries.service.FirebaseMessageReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

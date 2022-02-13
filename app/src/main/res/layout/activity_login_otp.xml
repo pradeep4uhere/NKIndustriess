@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/otp_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login_otp">
+
+    <ImageView
+        android:id="@+id/otp_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.004"
+        app:srcCompat="@drawable/verification_otp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <TextView
+        android:id="@+id/otp_heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/bungee"
+        android:includeFontPadding="false"
+        android:padding="10dp"
+        android:text="OTP Verification"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otp_logo" />
+
+    <TextView
+        android:id="@+id/otp_sub_text"
+        android:layout_width="324dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="5dp"
+        android:text=" We  sent you an OTP on your registred number"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otp_heading" />
+
+    <TextView
+        android:id="@+id/enter_otp_heading"
+        android:layout_width="229dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:fontFamily="@font/bungee"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Enter OTP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otp_sub_text" />
+
+    <EditText
+        android:id="@+id/otp_input"
+        android:layout_width="235dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:ems="10"
+        android:fontFamily="@font/bungee"
+        android:gravity="center"
+        android:includeFontPadding="true"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.57"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enter_otp_heading" />
+
+    <TextView
+        android:id="@+id/didnt_recv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="12dp"
+        android:padding="5dp"
+        android:text="Didn't Recived ?"
+        android:textSize="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otp_input" />
+
+    <TextView
+        android:id="@+id/resend_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:padding="5dp"
+        android:text="RESEND OTP"
+        android:textColorHighlight="#E91E63"
+        android:textColorHint="#E91E63"
+        android:textColorLink="#E91E63"
+        android:textSize="12dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toEndOf="@+id/didnt_recv_text"
+        app:layout_constraintTop_toBottomOf="@+id/otp_input" />
+
+    <Button
+        android:id="@+id/procced_btn"
+        android:layout_width="273dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:text="Verify And Procced"
+        app:backgroundTint="#F44336"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/didnt_recv_text"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
