@@ -145,6 +145,7 @@ public class FundTransferConfirmation extends AppCompatActivity {
     public void initView() {
         txtName.setText(accountList.beneficiary_name);
         txtBankName.setText(accountList.bankName);
+        txtAccount.setText(accountList.account_number);
         txtIfsc.setText(accountList.ifsc_code);
         if (accountList.account_type == 1) {
             txtAccountType.setText("Saving");
