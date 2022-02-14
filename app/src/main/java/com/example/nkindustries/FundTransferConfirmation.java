@@ -113,7 +113,7 @@ public class FundTransferConfirmation extends AppCompatActivity {
                         assert response.body() != null;
                         s = response.body().string();
                         JSONObject jsonObject = new JSONObject(s);
-                        Log.d("TransferByDMT2", "onResponse: " + jsonObject);
+                        Log.d("TransferSuccess", "DMT Two: " + jsonObject);
                         if (jsonObject.getBoolean("status")) {
                             showToast(jsonObject.getString("message"));
                             JSONObject jsonDataSet = jsonObject.getJSONObject("dataSet");
@@ -129,6 +129,8 @@ public class FundTransferConfirmation extends AppCompatActivity {
                     } catch (IOException | JSONException e) {
                         e.printStackTrace();
                     }
+                }else {
+                    showToast(response.message());
                 }
             }
 
@@ -174,6 +176,7 @@ public class FundTransferConfirmation extends AppCompatActivity {
             public void onResponse(Call<FundTransferResponse> call, Response<FundTransferResponse> response) {
                 FundTransferResponse fundTransferResponse = response.body();
                 showPopupProgressSpinner(false, FundTransferConfirmation.this);
+                Log.d("TransferSuccess", "DMT One: "+fundTransferResponse);
                 if (fundTransferResponse != null) {
                     if (fundTransferResponse.status) {
                         showToast(fundTransferResponse.message);

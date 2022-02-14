@@ -43,10 +43,10 @@
             android:id="@+id/btnLink"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
-            android:textSize="10dp"
             android:fontFamily="@font/roboto_medium"
             android:text="Add Money PG-1"
-            app:backgroundTint="#FF5722" />
+            android:textSize="10dp"
+            app:backgroundTint="#3F51B5" />
     </LinearLayout>
 
 </LinearLayout>

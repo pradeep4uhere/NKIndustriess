@@ -50,6 +50,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="20dp">
+
                 <Button
                     android:id="@+id/btnDMT1"
                     android:layout_width="match_parent"
@@ -57,7 +58,8 @@
                     android:layout_marginTop="5dp"
                     android:text="DMT TRANSFER-1"
                     android:textColor="@color/white"
-                    app:backgroundTint="#F44336" />
+                    app:backgroundTint="#3F51B5" />
+
                 <Button
                     android:id="@+id/btnDMT2"
                     android:layout_width="match_parent"
@@ -65,7 +67,7 @@
                     android:layout_marginTop="5dp"
                     android:text="DMT TRANSFER-2"
                     android:textColor="@color/white"
-                    app:backgroundTint="#F44336" />
+                    app:backgroundTint="#2196F3" />
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>

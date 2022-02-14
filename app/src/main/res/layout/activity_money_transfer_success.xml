@@ -117,6 +117,7 @@
                             android:layout_height="match_parent"
                             android:background="#E4FAE5"
                             android:orientation="vertical">
+
                             <ImageView
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
@@ -124,6 +125,7 @@
                                 android:layout_marginTop="30dp"
                                 android:layout_marginBottom="10dp"
                                 android:src="@drawable/green_ok" />
+
                             <TextView
                                 android:id="@+id/txtName"
                                 android:layout_width="wrap_content"
@@ -156,8 +158,8 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
-                                android:text="IFSC: PNBUH000982"
                                 android:fontFamily="@font/roboto"
+                                android:text="IFSC: PNBUH000982"
                                 android:textSize="10dp" />
 
                             <TextView
@@ -225,8 +227,8 @@
                                     android:fontFamily="@font/roboto_medium"
                                     android:text="Processing"
                                     android:textColor="#ff0000"
-                                    android:textStyle="bold"
-                                    android:textSize="12dp" />
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
                             </LinearLayout>
 
                             <TextView
@@ -246,8 +248,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center_horizontal"
                                 android:layout_marginTop="5dp"
-                                android:text="Ref No: 231020210001"
                                 android:fontFamily="@font/roboto"
+                                android:text="Ref No: 231020210001"
                                 android:textSize="12dp" />
                         </LinearLayout>
 
@@ -261,10 +263,10 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal|bottom"
                     android:layout_margin="30dp"
+                    android:fontFamily="@font/roboto_medium"
                     android:scrollbarFadeDuration="200"
                     android:text="Transfer Again"
                     android:textColor="#FFF"
-                    android:fontFamily="@font/roboto_medium"
                     android:textColorHighlight="#fff"
                     android:textColorHint="#000FFF"
                     android:textColorLink="#fff"
@@ -279,21 +281,5 @@
     </LinearLayout>
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_gravity="bottom"
-        android:background="@drawable/rounded_corner"
-        app:itemIconTint="@color/white"
-        app:itemRippleColor="#FFFFFF"
-        app:itemTextColor="#FFFFFF"
-        android:elevation="8dp"
-        android:paddingRight="20dp"
-        android:paddingLeft="20dp"
-        android:layout_margin="30dp"
-        app:itemIconSize="25dp"
-        app:menu="@menu/bottom_menu"
-        android:id="@+id/bottom_navigation_money_success"
-        />
 </FrameLayout>
 
