@@ -84,12 +84,13 @@
     </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_contact_fab_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/add_contact_fab_btn"
-        android:src="@drawable/ic_white_add"
         android:layout_gravity="end|bottom"
         android:layout_margin="30dp"
-        app:fabSize="auto"/>
+        android:src="@drawable/ic_white_add"
+        app:backgroundTint="#3F51B5"
+        app:fabSize="auto" />
 
 </FrameLayout>

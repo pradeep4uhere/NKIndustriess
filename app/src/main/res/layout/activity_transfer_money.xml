@@ -321,12 +321,12 @@
                         <Button
                             android:id="@+id/transfer_money_submit_btn"
                             android:layout_width="match_parent"
-                            android:fontFamily="@font/roboto_medium"
                             android:layout_height="60dp"
                             android:layout_marginTop="5dp"
+                            android:fontFamily="@font/roboto_medium"
                             android:text="TRANSFER NOW"
                             android:textColor="#fff"
-                            app:backgroundTint="#F44336" />
+                            app:backgroundTint="#3F51B5" />
 
                     </LinearLayout>
 

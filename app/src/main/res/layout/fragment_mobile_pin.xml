@@ -109,9 +109,6 @@ tools:context=".ui.mpin.MobilePinFragment">
                     </com.google.android.material.textfield.TextInputLayout>
 
 
-
-
-
                     <Button
                         android:id="@+id/transfer_money_submit_btn"
                         android:layout_width="match_parent"
@@ -119,7 +116,7 @@ tools:context=".ui.mpin.MobilePinFragment">
                         android:layout_marginTop="5dp"
                         android:text="Submit"
                         android:textColor="#fff"
-                        app:backgroundTint="#F44336" />
+                        app:backgroundTint="#3F51B5" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

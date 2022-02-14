@@ -131,6 +131,7 @@
                         android:textColor="@color/white"
                         app:backgroundTint="#2196F3" />
                 </LinearLayout>
+
                 <Button
                     android:id="@+id/btnSubmit"
                     android:layout_width="match_parent"
@@ -138,7 +139,7 @@
                     android:layout_marginTop="5dp"
                     android:text="Submit Request"
                     android:textColor="@color/white"
-                    app:backgroundTint="#F44336" />
+                    app:backgroundTint="#3F51B5" />
             </LinearLayout>
             <include layout="@layout/copyrights_footer" />
         </LinearLayout>

@@ -115,10 +115,10 @@
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:background="@color/teal_200"
-            android:text="Submit To Add Contact"
             android:fontFamily="@font/roboto"
+            android:text="Submit To Add Contact"
             android:textColor="#fff"
-            app:backgroundTint="#F44336"
+            app:backgroundTint="#3F51B5"
             app:cornerRadius="10dp" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

@@ -134,7 +134,7 @@
         android:textColorHighlight="#03A9F4"
         android:textColorHint="#000FFF"
         android:textColorLink="#2196F3"
-        app:backgroundTint="#F44336"
+        app:backgroundTint="#3F51B5"
         app:icon="@drawable/ic_white_add_24" />
 
 </RelativeLayout>
