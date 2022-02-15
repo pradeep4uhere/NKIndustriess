@@ -50,23 +50,22 @@ tools:context=".ui.mpin.MobilePinFragment">
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/ubuntu_bold"
                 android:gravity="center"
                 android:padding="10dp"
                 android:text="MPIN Password"
                 android:textColor="@color/black"
-                android:textSize="16sp"
-                android:fontFamily="@font/ubuntu_bold"/>
+                android:textSize="16sp" />
 
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginLeft="20dp"
                 android:elevation="8dp"
-                app:cardCornerRadius="10dp"
-                >
+                app:cardCornerRadius="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -86,11 +85,10 @@ tools:context=".ui.mpin.MobilePinFragment">
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="number"
-                            android:text=""
-                            android:maxLength="50" />
+                            android:maxLength="50"
+                            android:text="" />
 
                     </com.google.android.material.textfield.TextInputLayout>
-
 
 
                     <com.google.android.material.textfield.TextInputLayout
@@ -104,7 +102,7 @@ tools:context=".ui.mpin.MobilePinFragment">
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="number"
-                            android:maxLength="20"/>
+                            android:maxLength="20" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -125,20 +123,4 @@ tools:context=".ui.mpin.MobilePinFragment">
         </LinearLayout>
     </RelativeLayout>
 </LinearLayout>
-<com.google.android.material.bottomnavigation.BottomNavigationView
-    android:layout_width="match_parent"
-    android:layout_height="55dp"
-    android:layout_gravity="bottom"
-    android:background="@drawable/rounded_corner"
-    app:itemIconTint="@color/white"
-    app:itemRippleColor="#FFFFFF"
-    app:itemTextColor="#FFFFFF"
-    android:elevation="8dp"
-    android:paddingRight="20dp"
-    android:paddingLeft="20dp"
-    android:layout_margin="30dp"
-    app:itemIconSize="25dp"
-    app:menu="@menu/left_navigation"
-    android:id="@+id/bottom_navigation_money_success"
-    />
 </FrameLayout>

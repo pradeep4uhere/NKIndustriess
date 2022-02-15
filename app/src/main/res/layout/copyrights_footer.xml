@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:textSize="10dp"
             android:gravity="center_horizontal|center_vertical"
-            android:text="Email: info@payertrust.in | Whatsapp: +91-9142562743"/>
+            android:text="Email: info@nkindustriess.com | Whatsapp: +91-8744081351"/>
         <TextView
             android:id="@+id/vesrion"
             android:layout_width="match_parent"
