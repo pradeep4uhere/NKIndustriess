@@ -15,6 +15,7 @@
             android:title="Wallet Recharge" />
         <item
             android:id="@+id/nav_wallet_pay"
+            android:visible="false"
             android:icon="@drawable/ic_baseline_mobile_screen_share_24"
             android:title="Wallet Pay" />
 

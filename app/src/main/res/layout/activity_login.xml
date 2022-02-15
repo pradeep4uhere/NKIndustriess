@@ -120,11 +120,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="5dp"
-                android:background="#FF6A3B"
+                android:background="#2196F3"
                 android:elevation="0dp"
                 android:text="New User SignUp"
                 android:textColor="@color/white"
-                app:backgroundTint="#FF9800" />
+                app:backgroundTint="#2196F3" />
             <include layout="@layout/copyrights_footer" />
     </LinearLayout>
 </LinearLayout>

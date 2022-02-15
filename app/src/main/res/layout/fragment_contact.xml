@@ -63,7 +63,7 @@
         <androidx.appcompat.widget.SearchView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/svSearchView"
+            android:id="@+id/searchContactList"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             app:queryHint="Enter Mobile Number"

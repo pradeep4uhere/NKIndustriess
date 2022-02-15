@@ -22,6 +22,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -32,6 +33,7 @@ import com.example.nkindustries.ContactViewAdapter;
 import com.example.nkindustries.R;
 
 import com.example.nkindustries.databinding.FragmentContactBinding;
+import com.example.nkindustries.model.AccountListresponse;
 import com.example.nkindustries.model.ContactResponse;
 import com.example.nkindustries.model.CreateContactResponse;
 import com.example.nkindustries.retrofit.RetrofitClient;
@@ -67,6 +69,7 @@ public class ContactFragment extends Fragment  {
     RecyclerView rcv;
 
     RecyclerView recyclerView;
+    SearchView searchContactList;
     ContactViewAdapter cadapter;
     NavigationView navigationView;
     Button button;
@@ -174,13 +177,46 @@ public class ContactFragment extends Fragment  {
 
 
         recyclerView =view.findViewById(R.id.recview);
+        searchContactList =view.findViewById(R.id.searchContactList);
         //recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         cadapter = new ContactViewAdapter(lstPerson,getActivity().getApplicationContext(),this);
         recyclerView.setAdapter(cadapter);
+
+        //Search Contact by Nsme or Number . . .
+        searchContactList.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+
+                return false ;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                filter(newText);
+                return false;
+            }
+        });
+
         return  view;
 
     }
+
+    private void filter(String query) {
+        ArrayList<ContactResponse.Datum> filteredlist = new ArrayList<>();
+        for (ContactResponse.Datum item : lstPerson) {
+            if (item.mobileNumber.toLowerCase().contains(query.toLowerCase()) ||
+                    item.name.toLowerCase().contains(query.toLowerCase())) {
+                filteredlist.add(item);
+            }
+        }
+        if (filteredlist.isEmpty()) {
+            Toast.makeText(getContext(), "No Data Found..", Toast.LENGTH_SHORT).show();
+        } else {
+            cadapter.filterList(filteredlist);
+        }
+    }
+
     private void showToast(String message)
     {
         Toast.makeText(getActivity().getApplicationContext(), message, Toast.LENGTH_SHORT).show();

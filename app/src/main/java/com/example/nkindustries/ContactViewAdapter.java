@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.nkindustries.model.AccountListresponse;
 import com.example.nkindustries.model.ContactResponse;
 import com.example.nkindustries.ui.contact.ContactFragment;
 
@@ -19,7 +20,7 @@ import java.util.List;
 
 public class ContactViewAdapter extends RecyclerView.Adapter<ContactViewAdapter.MyViewHolder> {
 
-    private final List<ContactResponse.Datum> mData;
+    private List<ContactResponse.Datum> mData;
     Context context;
     ContactFragment contactFragment;
     public ContactViewAdapter(List<ContactResponse.Datum> mData, Context context,ContactFragment contactFragment) {
@@ -69,7 +70,15 @@ public class ContactViewAdapter extends RecyclerView.Adapter<ContactViewAdapter.
         });
 
     }
-
+    //Filter for search . . .
+    public void filterList(List<ContactResponse.Datum> filterllist) {
+        // below line is to add our filtered
+        // list in our course array list.
+        mData = filterllist;
+        // below line is to notify our adapter
+        // as change in recycler view data.
+        notifyDataSetChanged();
+    }
 
     @Override
     public int getItemCount() {
