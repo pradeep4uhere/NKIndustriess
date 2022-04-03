@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -74,7 +75,7 @@ public class ContactDetail extends AppCompatActivity {
                 finish();
             }
         });
-
+        Log.d("CheckSelectedUser", "On Contact Detail Page: "+contactDetails.id+"\n Name: "+contactDetails.name);
         myPreferences = new MyPreferences(this);
 
         addAcount = (ExtendedFloatingActionButton) findViewById(R.id.add_contact_detail_fab_btn);

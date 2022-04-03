@@ -11,7 +11,7 @@ public class ContactResponse implements Serializable {
     public List<Datum> data;
 
     public class Datum implements Serializable{
-        public int id;
+        public String id;
         @SerializedName("Name")
         public String name;
         @SerializedName("MobileNumber")

@@ -2,6 +2,7 @@ package com.example.nkindustries;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,11 +47,11 @@ public class ContactViewAdapter extends RecyclerView.Adapter<ContactViewAdapter.
         holder.person_mobile.setText( mData.get(position).mobileNumber);
         holder.person_email.setText(mData.get(position).emailAddress);
         //holder.person_image.setImageResource(mData.get(position).getThumbnail());
-
+        Log.d("CheckSelectedUser", "Contact View Adapter: "+mData.get(position).id+"\n Name: "+mData.get(position).name);
         holder.popMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                contactFragment.openBottomSheet(position);
+                contactFragment.openBottomSheet(position, mData.get(position));
             }
         });
 

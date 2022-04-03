@@ -9,6 +9,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -240,6 +241,7 @@ public class ContactFragment extends Fragment  {
                     if(temp.success){
                         lstPerson.clear();
                         lstPerson.addAll(temp.data);
+                        Log.d("CheckSelectedUser", "Check Temp Data: "+temp.data);
                         cadapter.notifyDataSetChanged();
                     }
                 }
@@ -298,7 +300,7 @@ public class ContactFragment extends Fragment  {
         }
     }
 
-    public void openBottomSheet(int position){
+    public void openBottomSheet(int position, ContactResponse.Datum datum){
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(requireContext());
         bottomSheetDialog.setContentView(R.layout.dmt_bottomsheet);
         Button btnDmt1 = bottomSheetDialog.findViewById(R.id.btnDMT1);
@@ -306,8 +308,9 @@ public class ContactFragment extends Fragment  {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(requireContext(), ContactDetail.class);
-                intent.putExtra("contactDetails", (Serializable) lstPerson.get(position));
+                intent.putExtra("contactDetails", (Serializable) datum);
                 intent.putExtra("accountType","dmt1");
+                Log.d("CheckSelectedUser", "In DMT1: "+datum.id);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
@@ -318,8 +321,9 @@ public class ContactFragment extends Fragment  {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(requireContext(), ContactDetail.class);
-                intent.putExtra("contactDetails", (Serializable) lstPerson.get(position));
+                intent.putExtra("contactDetails", (Serializable) datum);
                 intent.putExtra("accountType","dmt2");
+                Log.d("CheckSelectedUser", "In DMT2: "+datum.id);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
