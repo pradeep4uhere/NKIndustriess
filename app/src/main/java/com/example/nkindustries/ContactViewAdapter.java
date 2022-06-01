@@ -60,7 +60,7 @@ public class ContactViewAdapter extends RecyclerView.Adapter<ContactViewAdapter.
             public void onClick(View v) {
                 Intent intent = new Intent(context,ContactDetail.class);
                 intent.putExtra("contactDetails", (Serializable) mData.get(position));
-                intent.putExtra("accountType","dmt1");
+                intent.putExtra("accountType","dmt2");
 //                intent.putExtra("Contact Email",temp.getEmail());
 //                intent.putExtra("Contact Email",temp.getMobile());
 //                intent.putExtra("Contact Email",temp.getThumbnail());
