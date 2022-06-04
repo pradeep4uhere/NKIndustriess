@@ -1,4 +1,4 @@
-package info.androidhive.introslider;
+package com.example.nkindustries;
 
 import android.content.Context;
 import android.content.SharedPreferences;

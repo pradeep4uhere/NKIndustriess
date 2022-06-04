@@ -1,5 +1,6 @@
 package com.example.nkindustries;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -39,7 +40,7 @@ public class ContactViewAdapter extends RecyclerView.Adapter<ContactViewAdapter.
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
         final ContactResponse.Datum temp = mData.get(position);
 
